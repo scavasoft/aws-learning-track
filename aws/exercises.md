@@ -25,7 +25,7 @@ References:
 * https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-create-api-as-simple-proxy-for-lambda.html
 * https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-example-table-read-write.html
 
-### 3. Lambda and SNS - Pub/Sub mechanism
+### 3. Lambda -> SNS -> Lambda - Pub/Sub mechanism
 
 Create a Lambda, that, when invoked will create a row in a DynamoDB table "chat_messages" with a unique UUID. The Lambda
 will also log the current time within the DynamoDB row, under a field called `message_sent_at=[current_timestamp]`. The
