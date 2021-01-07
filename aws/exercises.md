@@ -49,3 +49,12 @@ will not help here).
 References:
 
 * https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html
+
+### 5. AppSync -> Lambda -> DynamoDB
+
+Create an AppSync (GraphQL) endpoint with a schema that defines standard CRUD operations that allow you to manage Users within a platform. Every operation should use Lambda as its Data Source. Information should be stored in a DynamoDB table.
+
+References:
+* https://aws.amazon.com/appsync/
+* https://docs.aws.amazon.com/appsync/latest/devguide/tutorial-lambda-resolvers.html
+* https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-example-table-read-write.html
