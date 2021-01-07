@@ -66,3 +66,7 @@ Create an API Gateway with an endpoint that accepts a raw mp3 file with English,
 In background mode, start an AWS Transcribe job to extract the text from the audio and store it inside the same DynamoDB row as the "status" field. Finally, mark the row in DynamoDB as `status=completed`.
 
 Create another API endpoint that allows the client to retrieve the current status of the job and, if completed, also retrieve the extracted text from DynamoDB.
+
+### 7. ECS Cluster with Fargate tasks
+
+Create an ECS cluster that launches a load balanced Fargate task that serves a standard NGINX container (Docker image). There should be at least 3 containers of NGINX running always for High-Availability reasons.
