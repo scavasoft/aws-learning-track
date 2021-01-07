@@ -58,3 +58,11 @@ References:
 * https://aws.amazon.com/appsync/
 * https://docs.aws.amazon.com/appsync/latest/devguide/tutorial-lambda-resolvers.html
 * https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-example-table-read-write.html
+
+### 6. App to extract text from audio files (Speech to Text)
+
+Create an API Gateway with an endpoint that accepts a raw mp3 file with English, Italian or German spoken language. The endpoint should accept a `?lang=en` query parameter where the client can hint to the application what the language of the file is. Store a reference to the file inside a DynamoDB table with `status=pending` and return a unique ID to the caller.
+
+In background mode, start an AWS Transcribe job to extract the text from the audio and store it inside the same DynamoDB row as the "status" field. Finally, mark the row in DynamoDB as `status=completed`.
+
+Create another API endpoint that allows the client to retrieve the current status of the job and, if completed, also retrieve the extracted text from DynamoDB.
