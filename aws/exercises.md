@@ -43,7 +43,7 @@ References:
 
 Create a DynamoDB table with Stream enabled. Attach a Lambda to that Stream. The purpose of that Lambda is to log all
 incoming events in a structured format like `[timestamp][name_of_operation][ID of affected row]` within a predefined
-CloudWatch Log Group, the ARN of which is dynamically passed to the Lambda as an Environment Variable (so console.log()
+CloudWatch Log Group, a reference to which is dynamically passed to the Lambda as an Environment Variable (so console.log()
 will not help here).
 
 References:
