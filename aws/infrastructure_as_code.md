@@ -1,7 +1,7 @@
 ## Infrastructure as code
 
-What is IaC?
-https://youtu.be/RO7VcUAsf-I
+* What is IaC, as described by the CTO of HashiCorp? https://youtu.be/RO7VcUAsf-I
+
 
 Popular options:
 
